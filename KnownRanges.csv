@@ -1,0 +1,7 @@
+Range,Label,Type
+#-- Our own addresses and customer ranges. Checked before any online lookup.
+#-- Range: CIDR (203.0.113.0/24) or a single address (203.0.113.7).
+#-- Type : Ours | Customer   (shown in capitals at the top of the Summary)
+#-- A row whose Range starts with # is ignored, so these lines are safe to keep.
+#203.0.113.0/24,Head office,Ours
+#198.51.100.7,Example Pty Ltd - main site,Customer
