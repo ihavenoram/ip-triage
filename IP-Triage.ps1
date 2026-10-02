@@ -12,7 +12,7 @@
         service ports - it reads the banner/headers/certificate a service already
         offers, then closes. Only probe IPs you own or are authorised to test.
 
-    Launch via Run-IP-Triage.cmd (forces -STA, required for WinForms).
+    Launch via Launch-IP-Triage.cmd (forces -STA, required for WinForms).
     No admin required.
 #>
 [CmdletBinding()]
@@ -31,7 +31,7 @@ param(
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 # Both of these are process-wide one-shots. Running the script a second time in
-# the SAME PowerShell session (rather than via Run-IP-Triage.cmd, which starts a
+# the SAME PowerShell session (rather than via Launch-IP-Triage.cmd, which starts a
 # fresh process) throws "SetCompatibleTextRenderingDefault must be called before
 # the first IWin32Window object is created". They only affect text rendering, so
 # a failure on the second run is harmless - swallow it rather than refusing to

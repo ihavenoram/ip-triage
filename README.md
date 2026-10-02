@@ -18,7 +18,7 @@ Get-FileHash .\IP-Triage.zip -Algorithm SHA256
 
 ## Run it
 
-Double-click **`Run-IP-Triage.cmd`** (it launches PowerShell with `-STA`, which WinForms needs). No admin required.
+Double-click **`Launch-IP-Triage.cmd`** (it launches PowerShell with `-STA`, which WinForms needs). No admin required.
 
 Type or paste the target and click **Look up** (or press Enter). It accepts:
 
@@ -58,7 +58,7 @@ The Summary separates two questions:
 **Expected countries are off by default.** The country is always shown, but nothing is judged foreign until you say where your traffic normally comes from:
 
 ```bat
-Run-IP-Triage.cmd -ExpectedCountries "GB,IE"
+Launch-IP-Triage.cmd -ExpectedCountries "GB,IE"
 ```
 
 Registry country (RDAP/Cymru) is preferred over the geolocation guess. Where the two disagree but geolocation still lands in an expected country (normal for AWS/Azure regions registered to a US head office), it's reported as a note and does *not* count as foreign.
@@ -89,7 +89,7 @@ Each validates that the value is address-shaped and URL-encodes it first. The CT
 
 | File | Purpose |
 |---|---|
-| `Run-IP-Triage.cmd` | Launcher (forces `-STA`) |
+| `Launch-IP-Triage.cmd` | Launcher (forces `-STA`) |
 | `IP-Triage.ps1` | The GUI, worker and renderers |
 | `IP-Triage.Helpers.ps1` | Lookup, parse and fingerprint functions |
 | `IP-Triage.Dns.ps1` | DNS and mail-security checks for the DNS / MX tab |
